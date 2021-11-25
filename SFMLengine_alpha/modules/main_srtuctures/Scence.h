@@ -5,6 +5,7 @@ class Scence : public sf::Drawable
 {
 private:
 	std::vector<sf::View> views;
+	// сущности которые хранят в себе компоненты а также заготовки объектов
 	std::vector<Entity> entities;
 public:
 	Scence(Game* game);
@@ -15,7 +16,7 @@ public:
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 	
 	void logic();
-
+	//здесь передаются все указатели для задание внутренности объектов
 	template<class T>
 	void set(Game* game,int numb=0);
 

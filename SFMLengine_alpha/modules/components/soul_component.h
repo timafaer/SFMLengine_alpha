@@ -1,7 +1,7 @@
 #pragma once
 #include"component.h"
 #include"../templates/object.h"
-
+//душа хранит объект(разные типы и наследников)
 class SoulComponent :public Component
 {
 private:

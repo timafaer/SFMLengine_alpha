@@ -16,7 +16,7 @@ public:
 
 	template<class T>
 	T& get_component() const;
-
+	//душа - объект получает все ссылки
 	template<class T>
 	void set_soul(Game* game, Scence* scence);
 	
