@@ -1,14 +1,19 @@
 #pragma once
-#include<SFML/Graphics.hpp>
+
 #include"component.h"
+#include<SFML/Graphics.hpp>
 
-class DrawComponent : public Component, public sf::Drawable
+class DrawComponent :public Component, public sf::Drawable
 {
+
 protected:
-	sf::Drawable* object;
-
+	sf::Drawable* obj;
 public:
-	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+	void draw(sf::RenderTarget& target, sf::RenderStates states) const
+	{
+		target.draw(*this->obj);
+	}
+	void set(sf::Drawable* obj) { this->obj = obj; }
 
-	void set(sf::Drawable* obj);
+
 };

@@ -57,6 +57,9 @@
     <ClCompile Include="src\templates\object.cpp">
       <Filter>Исходные файлы\templates</Filter>
     </ClCompile>
+    <ClCompile Include="src\main_structures\Map.cpp">
+      <Filter>Исходные файлы\structures</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="modules\components\component.h">
@@ -78,6 +81,12 @@
       <Filter>Файлы заголовков\structures</Filter>
     </ClInclude>
     <ClInclude Include="modules\main_srtuctures\Scence.h">
+      <Filter>Файлы заголовков\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\Editor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="modules\main_srtuctures\Map.h">
       <Filter>Файлы заголовков\structures</Filter>
     </ClInclude>
   </ItemGroup>

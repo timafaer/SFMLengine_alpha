@@ -151,6 +151,7 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\main_structures\Entity.cpp" />
     <ClCompile Include="src\main_structures\Game.cpp" />
+    <ClCompile Include="src\main_structures\Map.cpp" />
     <ClCompile Include="src\main_structures\Scence.cpp" />
     <ClCompile Include="src\templates\object.cpp" />
   </ItemGroup>
@@ -158,8 +159,10 @@
     <ClInclude Include="modules\components\component.h" />
     <ClInclude Include="modules\components\draw_component.h" />
     <ClInclude Include="modules\components\soul_component.h" />
+    <ClInclude Include="modules\Editor.h" />
     <ClInclude Include="modules\main_srtuctures\Entity.h" />
     <ClInclude Include="modules\main_srtuctures\Game.h" />
+    <ClInclude Include="modules\main_srtuctures\Map.h" />
     <ClInclude Include="modules\main_srtuctures\Scence.h" />
     <ClInclude Include="modules\templates\object.h" />
   </ItemGroup>
