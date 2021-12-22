@@ -1,26 +1,39 @@
 #pragma once
 #include"Entity.h"
-
+#include"Map.h"
 class Scence : public sf::Drawable
 {
 private:
 	std::vector<sf::View> views;
-	// сущности которые хранят в себе компоненты а также заготовки объектов
+
 	std::vector<Entity> entities;
+
+	std::vector<Map*> locations;
+	Map* local;
+
+	Entity hero;
 public:
-	Scence(Game* game);
+
+
 	void add_entity();
 
-	Entity* get(int n = 0) { return &entities[n]; }//придумать класс редактора
+	template<class T>
+	void add_map() {
+		locations.push_back(new T());
+		local = locations.back();
+	}
+
+	Entity* get(int n = 0) { return &entities[n]; }
+
+	Entity& hero() { return hero; }
 
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 	
 	void logic();
-	//здесь передаются все указатели для задание внутренности объектов
+	
 	template<class T>
-	void set(Game* game,int numb=0);
+	void  set(Game* game, int numb) {
+		this->entities[numb].set_soul<T>(game, this);
+	}
 
-	//временно
-private:
-	sf::CircleShape sh;
 };

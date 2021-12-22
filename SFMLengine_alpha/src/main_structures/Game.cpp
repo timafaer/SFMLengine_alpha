@@ -3,19 +3,18 @@
 Game::Game() {
 	window.create(sf::VideoMode(700, 700), "SFML works!");
 	window.setFramerateLimit(60);
-
-	add_scence();
-	
 }
 
 void Game::add_scence() {
-	scences.push_back(Scence(this));
+	scences.push_back(Scence());
 	n_sc = &scences.back();
 }
 
 void Game::draw() {
 	
-		window.draw(*n_sc);
+	window.clear(sf::Color::Black);
+		window.draw(scences[0]);
+		window.display();
 }
 
 void Game::logic() {
@@ -29,7 +28,10 @@ void Game::even() {
 }
 
 void Game::main_loop() {
-	even();
-	logic();
-	draw();
+	while (window.isOpen())
+	{
+		even();
+		logic();
+		draw();
+	}
 }

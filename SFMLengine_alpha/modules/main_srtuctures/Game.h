@@ -2,20 +2,19 @@
 #include"Scence.h"
 #include<SFML/System.hpp>
 
-// основной класс который имеет доступ ко всему
+class Editor;
+
 class Game
 {
 private:
-	//сцены
+
 	std::vector<Scence> scences;
-	//текущая сцена для быстрого поиска
+
 	Scence* n_sc;
 	sf::RenderWindow window;
 	sf::Texture texture;
 	sf::Event event;
-
-public:
-	Game();
+	sf::RectangleShape sh;
 
 	void add_scence();
 
@@ -24,7 +23,9 @@ public:
 	void logic();
 
 	void even();
+public:
+	Game();
 
 	void main_loop();
-	
+	friend class Editor;
 };
