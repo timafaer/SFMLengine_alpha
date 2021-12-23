@@ -18,7 +18,9 @@ public:
 	void logic();
 	//здесь передаются все указатели для задание внутренности объектов
 	template<class T>
-	void set(Game* game,int numb=0);
+	void set(Game* game, int numb) {
+		entities[numb].set_soul<T>(game, this);
+	}
 
 	//временно
 private:

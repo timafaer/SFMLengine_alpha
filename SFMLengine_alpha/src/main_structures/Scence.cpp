@@ -25,7 +25,3 @@ void Scence::logic() {
 		ent.logic();
 }
 
-template<class T>
-void Scence::set(Game* game,int numb) {
-	entities[numb].set_soul<T>(game, this);
-}
