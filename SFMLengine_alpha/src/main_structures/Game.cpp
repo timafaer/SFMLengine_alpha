@@ -5,6 +5,10 @@ Game::Game() {
 	window.setFramerateLimit(60);
 
 	add_scence();
+	sh.setFillColor(sf::Color::Green);
+	sh.setPosition(sf::Vector2f(200, 200));
+	sh.setRadius(40);
+	scences[0].get()->get_component<DrawComponent>().set(sh);
 	
 }
 
@@ -14,8 +18,9 @@ void Game::add_scence() {
 }
 
 void Game::draw() {
-	
+	window.clear();
 		window.draw(*n_sc);
+		window.display();
 }
 
 void Game::logic() {
@@ -29,7 +34,9 @@ void Game::even() {
 }
 
 void Game::main_loop() {
-	even();
-	logic();
-	draw();
+	while (window.isOpen()) {
+		even();
+		logic();
+		draw();
+	}
 }

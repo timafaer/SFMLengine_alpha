@@ -5,10 +5,7 @@ Scence::Scence(Game* game) {
 	entities[0].add_component<DrawComponent>();
 	entities[0].add_component<SoulComponent>();
 	entities[0].set_soul<Object>(game, this);
-	sh.setFillColor(sf::Color::Green);
-	sh.setPosition(sf::Vector2f(200, 200));
-	sh.setRadius(40);
-	entities[0].get_component<DrawComponent>().set(&sh);
+	
 }
 
 void Scence::add_entity() {

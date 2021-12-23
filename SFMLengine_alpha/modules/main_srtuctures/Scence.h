@@ -23,6 +23,4 @@ public:
 	}
 
 	//временно
-private:
-	sf::CircleShape sh;
 };

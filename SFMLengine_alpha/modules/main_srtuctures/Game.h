@@ -14,6 +14,8 @@ private:
 	sf::Texture texture;
 	sf::Event event;
 
+private:
+	sf::CircleShape sh;
 public:
 	Game();
 
